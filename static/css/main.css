@@ -1,0 +1,59 @@
+body {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    padding: 10px 10px;
+    background: rgb(214, 26, 60);
+}
+
+.header a {
+    padding: 0px 90%;
+    color: rgb(242, 243, 244);
+
+}
+
+.midbox {
+    margin: 100px;
+    text-align: center;
+}
+
+
+.midbox button {
+    background-color: rgb(242, 243, 244);
+    border: 2px solid rgb(214, 26, 60);
+    border-radius: 2px;
+    font-size: 200%;
+    margin: 2px;
+    padding: 10px;
+}
+
+.button_result {
+    font-size: 200%;
+    border: 4px solid black;
+    border-radius: 4px;
+    margin: 0 30%;
+}
+
+.button_result button {
+    font-size: 80%;
+    margin: 10px 90px 10px 24px;
+    padding: 7px 12px;
+    border: 2px solid rgb(214, 26, 60);
+    border-radius: 8px;
+    background-color: rgb(242, 243, 244);
+}
+
+.Res {
+    text-align: left;
+    padding-left: 10px;
+}
+
+table {
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    text-align: center;
+}

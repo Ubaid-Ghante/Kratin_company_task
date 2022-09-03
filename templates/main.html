@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/logout">Logout</a>
+    </div>
+
+
+    <!-- <section class="days">
+        <form id="Mon" method="POST"><input name="dayName" type="hidden" value="Mon"><button
+                type="submit">Monday</button></form>
+        <form id="Tue" method="POST"><input name="dayName" type="hidden" value="Tue"><button
+                type="submit">Tuesday</button></form>
+        <form id="Wed" method="POST"><input name="dayName" type="hidden" value="Wed"><button
+                type="submit">Wednesday</button></form>
+        <form id="Thu" method="POST"><input name="dayName" type="hidden" value="Thu"><button
+                type="submit">Thursday</button></form>
+        <form id="Fri" method="POST"><input name="dayName" type="hidden" value="Fri"><button
+                type="submit">Friday</button></form>
+        <form id="Sat" method="POST"><input name="dayName" type="hidden" value="Sat"><button
+                type="submit">Saturday</button></form>
+        <form id="Sun" method="POST"><input name="dayName" type="hidden" value="Sun"><button
+                type="submit">Sunday</button></form>
+    </section> -->
+
+    <form class="midbox" action="/main" method="POST">
+        <button type="submit">Monday</button>
+        <button type="submit">Tuesday</button>
+        <button type="submit">Wednesday</button>
+        <button type="submit">Thursday</button>
+        <button type="submit">Friday</button>
+        <button type="submit">Saturday</button>
+        <button type="submit">Sunday</button>
+    </form>
+
+    <section class="button_result">
+        <button id="taken">Taken</button>
+        <div class="Res">
+            <!-- <ul>
+                {% for medicine in medicineData %}
+                <li><span>{{medicine}}</span> <span id="consume">4</span> <span class="quantity">20</span></li>
+                {% endfor %}
+            </ul> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>Take Today</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for medicine in medicineData %}
+                    <tr>
+                        <td>{{medicine}}</td>
+                        <td>4</td>
+                        <td class="quantity">20</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+
+    <script>
+        let btn = document.getElementById("taken");
+        let quantity = document.getElementsByClassName("quantity");
+        btn.addEventListener("click", () => {
+            btn.style.backgroundColor = "rgb(52 194 48)";
+            btn.style.border = "2px solid rgb(52 194 48)"
+            quantity = [...quantity];
+            quantity.forEach(med => {
+                med.textContent = "16";
+            });
+        });
+
+    </script>
+</body>
+
+</html>
